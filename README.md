@@ -10,7 +10,7 @@ Project is split into three packages artist, itunes and config.
 Itunes package handles calls to itunes api. Calls are
 cached when needed. To increase data consistency we allow recalling itunes api till certain threshold. When threshold is 
 reached cache is used if results for artist is available. To minimise itunes api calls we could check cached record lifespan
-i.e. only refresh cache entries that were present for n+ minutes.
+and evict/update only then.
 
 Artist package handles rest api for artists and provide services and repositories to provide needed functionality.
 
